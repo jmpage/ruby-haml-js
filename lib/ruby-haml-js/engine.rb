@@ -1,5 +1,5 @@
 module RubyHamlJs
-  class Engine < Rails::Engine
+  class Engine < Rails::Railtie
     initializer "ruby-hamljs.configure_rails_initialization", :before => 'sprockets.environment', :group => :all do |app|
       next unless app.config.assets.enabled
 
